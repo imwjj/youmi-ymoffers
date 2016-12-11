@@ -1,8 +1,7 @@
 .container{
 	width:370px;
-	height:500px;
 	margin:0 auto;
-	margin-top:60px;
+	padding-top:60px;
 
 	.logo{
 		width:100%;
@@ -54,7 +53,8 @@
 			.checkbox{
 				display: inline-block;
 				height:20px;
-				padding-top:10px;
+				padding-left:5px;
+				padding-top:15px;
 				position:relative;
 
 				input[type='checkbox']{
@@ -71,13 +71,17 @@
 					position:relative;
 				}
 				span{
+					width:100px;
+					position:absolute;
+					top:0;
+					right:-105px;
 					vertical-align: middle;
 					font-size:1.4rem;
 				}
 
-				.labelbox:after{
+				.box{
 					opacity: 0.2;
-				    content: '';
+					display: inline-block;
 				    position: absolute;
 				    width: 9px;
 				    height: 5px;
@@ -94,12 +98,32 @@
 				    transform: rotate(-45deg);
 				}
 
-				.labelbox:hover::after{
+				.labelbox:hover .box{
 					opacity: 0.5;
 				}
 
-				.labelbox input[type='checkbox']:checked+.labelbox::after{
+				.labelbox input[type='checkbox']:checked + .box{
 				    opacity: 1;
+				}
+			}
+
+			.loginbtn{
+				float:right;
+				display:inline-block;
+				line-height:35px;
+
+				#login{
+					width:100px;
+					height:35px;
+					color:#fff;
+					font-size:1.6rem;
+					background-color:#428bca;
+					border-radius:5px;
+					cursor:pointer;
+
+					&:hover{
+						background-color:#3071a9;
+					}
 				}
 			}
 
