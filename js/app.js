@@ -1,5 +1,5 @@
 var app = angular.module('ymApp',[]);
 
-app.controller('loginController',['$scope',function($scope){
+app.controller('loginCtrl',['$scope',function($scope){
 	
 }]);
