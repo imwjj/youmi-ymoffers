@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	
+
 
 	//index.html背景切换插件
 	$.backstretch([
@@ -10,7 +10,7 @@ $(document).ready(function(){
 		"img/index_bg/4.jpg",
 	],	{
 		fade:1000,
-		duration:8000	
+		duration:8000
 	})
 
 });

@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container" ng-controller='loginCtrl'>
-		
+
 		<div class="logo">
 			<img src="./img/adxmi--umiplus.png" alt="ADXMI">
 		</div>
@@ -26,20 +26,69 @@
 				<i>&#xe648;</i>
 				<input type="password" name="password">
 			</div>
-			<div class="form-action">
-				<div class="checkbox">
+			<div class="form-action clearfix">
+				<!-- <div class="checkbox1">
 					<label for="remember" class="labelbox">
 						<input type='checkbox' id='remember'>
                         <div class="box"></div>
 						<span>Remember me</span>
+					</label>
+				</div> -->
+				<div class="checkbox2">
+					<input type='checkbox' id='remember'>
+					<label for="remember">
+						<span class="box"></span>
+						<span class="check"></span>
+						Remember me
 					</label>
 				</div>
                 <div class="loginbtn">
 					<button type="button" id="login">Login</button>
                 </div>
 			</div>
+			<div class="forget-password">
+				<p>Forgot password ? <a href="javascript:void(0);" class='forget'>Click here !</a></p>
+			</div>
+
+			<div class="cut-line"></div>
+
+			<div class="sign">
+				<p>Don't have an account yet ?</p>
+				<a>Affiliate Sign Up >> </a>
+			</div>
 		</div>
 
+		<!--找回密码-->
+		<div class="find-password">
+
+			<h3>Find your password</h3>
+
+			<div class="content">
+				<p>Enter your e-mail address below to reset your password.</p>
+				<div class="form">
+					<i>&#xe605;</i>
+					<input type="text" id="email" />
+				</div>
+			</div>
+
+			<div class="button-group">
+				<button type="button">Confirm</button>
+				<button type="button">Back</button>
+			</div>
+
+		</div>
+		<!---->
+
+		<!--注册-->
+
+
+
+		<!---->
+
+	</div>
+
+	<div class="copyright">
+			2016 &copy; Offers by Adxmi.
 	</div>
 
 	<script src='./bower_components/angular/angular.min.js'></script>
