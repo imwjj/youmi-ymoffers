@@ -1,26 +1,48 @@
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .container {
   width: 370px;
   margin: 0 auto;
   padding-top: 60px;
+  font-size: 1.4rem;
 }
+
+.container h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 10px 0;
+}
+
 .container .logo {
   width: 100%;
   height: 50px;
   text-align: center;
   margin-bottom: 20px;
 }
+
 .container .login {
   width: 100%;
   height: 450px;
   background-color: rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   padding: 20px 30px 15px 30px;
+  display: none;
 }
-.container .login h3 {
-  color: #fff;
-  font-size: 2.4rem;
-  padding: 10px 0;
+
+.container .login a {
+  color: #bb4b1a;
+  cursor: pointer;
 }
+
+.container .login a:hover {
+  text-decoration: underline;
+}
+
 .container .login .username, .container .login .password {
   width: 100%;
   height: 40px;
@@ -33,6 +55,7 @@
   padding-left: 5px;
   border-radius: 5px;
 }
+
 .container .login .username input, .container .login .password input {
   width: 90%;
   height: 30px;
@@ -40,23 +63,27 @@
   background: none;
   font-size: 1.6rem;
 }
+
 .container .login .form-action {
   width: 100%;
-  height: 40px;
+  height: 100px;
   margin-top: 20px;
   color: #fff;
 }
-.container .login .form-action .checkbox {
+
+.container .login .form-action .checkbox1 {
   display: inline-block;
   height: 20px;
   padding-left: 5px;
   padding-top: 15px;
   position: relative;
 }
-.container .login .form-action .checkbox input[type='checkbox'] {
+
+.container .login .form-action .checkbox1 input[type='checkbox'] {
   visibility: hidden;
 }
-.container .login .form-action .checkbox .labelbox {
+
+.container .login .form-action .checkbox1 .labelbox {
   display: inline-block;
   cursor: pointer;
   width: 16px;
@@ -65,7 +92,8 @@
   border-radius: 3px;
   position: relative;
 }
-.container .login .form-action .checkbox span {
+
+.container .login .form-action .checkbox1 span {
   width: 100px;
   position: absolute;
   top: 0;
@@ -73,7 +101,8 @@
   vertical-align: middle;
   font-size: 1.4rem;
 }
-.container .login .form-action .checkbox .box {
+
+.container .login .form-action .checkbox1 .box {
   opacity: 0;
   display: inline-block;
   position: absolute;
@@ -91,17 +120,75 @@
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.container .login .form-action .checkbox .labelbox:hover .box {
+
+.container .login .form-action .checkbox1 .labelbox:hover .box {
   opacity: 0.5;
 }
-.container .login .form-action .checkbox .labelbox input[type='checkbox']:checked + .box {
+
+.container .login .form-action .checkbox1 .labelbox input[type='checkbox']:checked + .box {
   opacity: 1;
 }
-.container .login .form-action .loginbtn {
-  float: right;
+
+.container .login .form-action .checkbox2 {
   display: inline-block;
-  line-height: 35px;
+  position: relative;
+  padding-top: 10px;
 }
+
+.container .login .form-action .checkbox2 input[type='checkbox'] {
+  visibility: hidden;
+  position: absolute;
+  top: 13px;
+  left: 0;
+}
+
+.container .login .form-action .checkbox2 label {
+  position: relative;
+  padding: 0 0 0 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.container .login .form-action .checkbox2 .box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity,0.5s,ease;
+}
+
+.container .login .form-action .checkbox2 .check {
+  width: 6px;
+  height: 12px;
+  border: 2px solid #45b6af;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  left: 2px;
+  top: -3px;
+  opacity: 0;
+  transition: opacity,0.5s,ease;
+}
+
+.container .login .form-action .checkbox2 input[type='checkbox']:checked + label .box {
+  transform: rotate(180deg) scale(0.3);
+  opacity: 0;
+}
+
+.container .login .form-action .checkbox2 input[type='checkbox']:checked + label .check {
+  transform: rotate(400deg);
+  opacity: 1;
+}
+
+.container .login .form-action .loginbtn {
+  display: inline-block;
+  float: right;
+}
+
 .container .login .form-action .loginbtn #login {
   width: 100px;
   height: 35px;
@@ -111,8 +198,87 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .container .login .form-action .loginbtn #login:hover {
   background-color: #3071a9;
 }
 
-/*# sourceMappingURL=index.css.map */
+.container .login .forget-password {
+  color: #fff;
+}
+
+.container .login .cut-line {
+  height: 1px;
+  margin: 20px 0;
+  border-top: 1px dotted #fff;
+}
+
+.container .login .sign {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.container .login .sign p {
+  margin: 15px 0;
+}
+
+.container .login .sign a {
+  font-weight: bold;
+}
+
+.container .find-password {
+  width: 100%;
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  padding: 20px 30px 15px 30px;
+}
+
+.container .find-password .content p {
+  color: #fff;
+  line-height: 1.6rem;
+  padding: 5px 0;
+}
+
+.container .find-password .content .form {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  background: #fff;
+  margin-top: 10px;
+  font-family: 'iconfont';
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.container .find-password .content .form i {
+  margin-left: 5px;
+}
+
+.container .find-password .content .form #email {
+  width: 85%;
+  height: 25px;
+  margin-left: -10px;
+  font-size: 1.4rem;
+  padding: 0 5px;
+}
+
+.container .find-password .button-group {
+  margin-top: 20px;
+}
+
+.container .find-password .button-group button {
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  background-color: #428bca;
+  margin: 5px 0;
+}
+
+.copyright {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+}
